@@ -1,6 +1,6 @@
 # CPUcoin token
 
-Smart contracts for the CPUcoin ecosystem token (see cpucoin.io ). 
+Smart contracts for the Filmio ecosystem token (see cpucoin.io ). 
 
 Core to CPUcoin pre-main net launch is an implementation of a fully-featured vesting token.
  

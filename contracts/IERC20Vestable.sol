@@ -1,6 +1,6 @@
 pragma solidity ^0.5.7;
 
-import "../../openzeppelin-solidity/contracts/token/ERC20/IERC20.sol";
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
 interface IERC20Vestable {
     function getIntrinsicVestingSchedule(address grantHolder)

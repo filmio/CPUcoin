@@ -9,7 +9,7 @@ let logger = console;
 
 const pathSeparator = /[\\/]/;
 
-const contractPath_default = './contracts/CpuCoin.sol';
+const contractPath_default = 'FANVesting.sol';
 
 let allSources = '';
 const dependencies = [];
@@ -36,8 +36,8 @@ const input_monolithic = {
     sources: {},
     settings: {
         outputSelection: {
-            'CpuCoin.sol': {
-                'CpuCoin': [
+            'FANVesting.sol': {
+                'FANToken': [
                     'evm.bytecode', 'abi',
 //                    'metadata', 'evm.bytecode.sourceMap', 'evm.bytecode.opcodes'
                 ]
@@ -98,7 +98,7 @@ function compileContract(contractPath, contractFile) {
     if (log) logger.log(JSON.parse(compiledJson));
 
     // Sort the ABI alphabetically by name so it's visually easier to locate a given methods while in Remix.
-    const abi = compiledObject.contracts["CpuCoin.sol"]["CpuCoin"].abi;
+    const abi = compiledObject.contracts["FANVesting.sol"]["FANToken"].abi;
     this.abi = abi.sort((a,b) => {
         if (lower(a.name) < lower(b.name))
             return -1;
@@ -242,7 +242,7 @@ function shortenSource(contractSource) {
 // without having to change the calling code. See comments in PauserRole.sol for details about why we differ.
 function substituteDependencyLine(line) {
     if (line.indexOf('PauserRole.sol') >= 0)
-        return ('import "../../../CpuCoin/contracts/PauserRole.sol"');
+        return ('import "../../../FANVesting/contracts/PauserRole.sol"');
     else
         return line;
 }
