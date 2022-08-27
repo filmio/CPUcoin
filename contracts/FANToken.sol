@@ -5,7 +5,7 @@ import "@openzeppelin/contracts/token/ERC20/ERC20Burnable.sol";
 import "@openzeppelin/contracts/token/ERC20/ERC20Detailed.sol";
 import "./UniformTokenGrantor.sol";
 
-contract FANVesting is Identity, ERC20, ERC20Pausable, ERC20Burnable, ERC20Detailed, UniformTokenGrantor {
+contract FANToken is Identity, ERC20, ERC20Pausable, ERC20Burnable, ERC20Detailed, UniformTokenGrantor {
     uint32 public constant VERSION = 8;
 
     uint8 private constant DECIMALS = 18;
